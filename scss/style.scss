@@ -1,0 +1,113 @@
+html{
+    background-color: hsl(233, 47%, 7%);
+}
+main{
+    display: flex;
+    min-height:100vh;
+    align-items: center;
+    justify-content: center;
+}
+.card-wrapper{
+    width:100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    
+    section{
+        flex: 1 0 50%;
+        
+     }
+
+     ul{
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         padding: 0;
+     }
+
+     li{
+        flex: 1 0 ;  
+        display:block;
+        margin: 10px;
+        span{
+            display: block;
+        }
+     }
+    
+     p{
+         color: hsla(0, 0%, 100%, 0.75);
+         line-height: 20px;
+         //word-spacing: 5px;
+         font-size: 10px;
+         margin-bottom: 50px;
+     }
+    .info-title{
+        font-size: 8px;
+        color: hsla(0, 0%, 100%, 0.6);
+        margin-top: 10px;
+    } 
+
+    .info-number{
+        font-weight: bold;
+        
+    }
+
+    #insights{
+        color:hsl(277, 64%, 61%);
+    }
+    #info{
+        border-radius: 10px 0px 0px 10px;
+        background-color: hsl(244, 38%, 16%);
+        font-family: 'Inter', sans-serif
+    }
+
+    .info-wrapper{
+        margin:50px;
+    }
+
+    #picture{
+        border-radius: 0px 10px 10px 0px;
+        //box-shadow:inset 0 0 0 2000px ;
+        //opacity: 0.5;
+        background:url('../images/image-header-desktop.jpg') hsla(277, 64%, 61%,1);;
+        background-size:cover;
+        background-blend-mode: multiply;
+        min-height: 200px;
+    }
+    img{
+        width: 100%;
+    }
+
+    @media screen  and (max-width:700px){
+        //flex-direction: column;
+        flex-wrap: wrap;
+        min-height: 540px;
+        section{
+            flex: 0 0 100%;
+            //display: block; 
+        }
+        #info{
+            order:1;
+            border-radius: 0px 0px 10px 10px;
+        }
+        #picture{
+            border-radius: 10px 10px 0px 0px;
+            background:url('../images/image-header-mobile.jpg') hsla(277, 64%, 61%,1);
+            background-size:cover;
+            order:0;
+        }
+    }
+
+    @media screen  and (max-width:375px){
+        ul,p{
+            text-align: center;
+
+            li{
+               min-width: 100%;
+            }
+        }  
+    }
+}
